@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="es">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Página de pruebas de todo</title>
+    <script src="../bower_components/angularjs/angular.min.js"></script>
+    <script src="bower_components/angular-autolayout/angular-autolayout.js"></script>
+    <link rel="stylesheet" href="style/style.css"/>
 </head>
-<body>
+<body ng-app="miApp">
 
+
+<div ng-controller="MiController">
+
+
+
+    <!--<div al-update-on-resize>-->
+
+        <!--<div id="entrada"><input type="text" ng-model="cosa"/></div>-->
+        <!--<div id="enCachibache"><input type="text" ng-model="cachibache"/></div>-->
+        <!--<div id="cachibache">{{cachibache}}</div>-->
+        <!--<div id="resultado">{{cosa}}</div>-->
+        <!--<al-constraint visual-format="|-[entrada(==200)]-[resultado]-|" align="top"></al-constraint>-->
+        <!--<al-constraint visual-format="V:|-[entrada]-30-[enCachibache]-|" align="top"></al-constraint>-->
+        <!--<al-constraint visual-format="|-[enCachibache]-[cachibache]"></al-constraint>-->
+    <!--</div>-->
+
+    <div class="bloque"></div>
+    <div class="bloque"></div>
+    <div class="bloque"></div>
+    <div class="footer">Soy un pie de página</div>
+</div>
+
+<script>
+    (function (window){
+
+        angular.module('miApp',['autolayout'])
+                .controller('MiController',miController);
+
+        function miController($scope) {
+
+            $scope.cosa='miCosa';
+            $scope.cachibache="Un Cachibache";
+        }
+
+    })(window.angular);
+
+</script>
 </body>
 </html>
